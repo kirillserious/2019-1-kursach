@@ -1,0 +1,48 @@
+\documentclass[a4paper, 11pt]{article}
+
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{a4wide}
+\usepackage[utf8]{inputenc}
+\usepackage[main = russian, english]{babel}
+\usepackage[pdftex]{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{indentfirst} 
+
+
+\newenvironment{compactlist}{
+        \begin{list}{{$\bullet$}}{
+                        \setlength\partopsep{0pt}
+                        \setlength\parskip{0pt}
+                        \setlength\parsep{0pt}
+                        \setlength\topsep{0pt}
+                        \setlength\itemsep{0pt}
+                }
+        }{
+        \end{list}
+}
+
+\newtheorem{definition}{Определение}[section]
+\newtheorem{theorem}{Теорема}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+
+\begin{document}
+        \include{title_page/doc}
+
+        \tableofcontents
+        \clearpage
+        
+        \include{first_discrete_system/doc}
+        \include{second_discrete_system/doc}
+        \include{continuous_system/doc}
+
+        \begin{thebibliography}{9}
+                \bibitem{bratus10} А.~С.~Братусь, А.~С.~Новожилов, А.~П.~Платонов. Динамические системы и~модели биологии. М.: ФИЗМАТЛИТ, 2010.
+        \end{thebibliography} 
+\end{document}

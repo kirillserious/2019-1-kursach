@@ -1,0 +1,40 @@
+\subsection{Переход к безразмерным параметрам}
+
+Для системы \ref{eq:continuous_system} сделаем стандартную замену переменных
+$$
+        x(t) = R u(t),\;
+        y(t) = Q v(t).\;
+        t    = T\tau,
+$$
+где $R,\; Q,\; T$~--- положительные параметры, которые мы выразим позже. Подставим в систему:
+$$
+        \left\{
+        \begin{aligned}
+                \frac{du}{d\tau} &= T \left[ r u(\tau) \left( b - \ln(Ru(\tau))\right) - bQu(\tau)v(\tau)\right] \\
+                \frac{dv}{d\tau} &= T \left[ -cv(\tau) + \frac{dRu(\tau)v(\tau)}{N + Qv(\tau)} \right]
+        \end{aligned}
+        \right.
+$$
+Теперь положим $R = \frac{d e^b}{c},\; Q = e^b,\; T = \frac{1}{c}$ и после тривиальных преобразований получим
+$$
+        \left\{
+        \begin{aligned}
+                e^b\frac{du}{d\tau} &= u(\tau)\left(-\frac{r}{c}\ln u(\tau) - \frac{bde^b}{c^2}v(\tau)\right) \\
+                \frac{dv}{d\tau} &= v(\tau)\left( -1 + \frac{u(\tau)}{\frac{Nc}{de^b} + v(\tau)}\right).
+        \end{aligned}
+        \right.
+$$
+Обозначим $\alpha = \frac{r}{c},\; \beta = \frac{bde^b}{c^2},\; \gamma = \frac{Nc}{de^b}$. Тогда система преобразуется к виду:
+\begin{equation} \label{eq:short_continuous_system}
+        \left\{
+        \begin{aligned}
+                \frac{du}{d\tau} &= u(\tau)\left( -\alpha\ln u(\tau) - \beta v(\tau) \right) \\
+                \frac{dv}{d\tau} &= v(\tau)\left( -1 + \frac{u(\tau)}{\gamma + v(\tau)}\right),
+        \end{aligned}
+        \right.
+\end{equation}
+где $\alpha,\; \beta,\; \gamma > 0$.\\
+\textit{Замечание.} В силу ограниченности максимально возможной популяции жертв, как было сказанно ранее $x(t) \leqslant e^b$. Переходя к новой переменной $u(\tau)$, получаем соотношение:
+$$
+        x(t) = e^b u(t) \leqslant e^b \;\Longrightarrow\; u(\tau) \leqslant 1.
+$$
