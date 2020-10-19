@@ -1,0 +1,6 @@
+*.log
+*.out
+*.aux
+*.toc
+*converted-to.pdf
+*.m~
